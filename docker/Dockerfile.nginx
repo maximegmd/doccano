@@ -1,4 +1,4 @@
-ARG NODE_VERSION="18.20-bullseye-slim"
+ARG NODE_VERSION="20-bullseye-slim"
 FROM node:${NODE_VERSION} AS frontend-builder
 
 COPY frontend/ /app/
@@ -11,7 +11,7 @@ RUN apt-get update \
  && yarn build \
  && apt-get clean
 
-FROM nginx:1.21.1-alpine AS runtime
+FROM nginx:1-alpine AS runtime
 
 RUN addgroup -g 61000 doccano \
   && adduser -G doccano -S doccano -u 61000
