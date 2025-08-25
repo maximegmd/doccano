@@ -37,7 +37,7 @@ doccano = 'backend.cli:main'
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Django = "^4.2.15"
+Django = "^4.2.20"
 environs = "^9.5.0"
 furl = "^2.1.3"
 djangorestframework = "^3.14.0"
